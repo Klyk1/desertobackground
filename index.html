@@ -10,8 +10,11 @@
 </head>
 <body>
     <header>
+
         <div class="container">
+            
             <div class="logo"><img src="estilo/img/logo.png" alt="logo"></div>
+
             <div class="menu">
                 <nav>
                     <a href="#">HOME</a>
@@ -20,7 +23,14 @@
                     <a href="#">CONTATO</a>
                 </nav>
             </div>
-            <div class="menu-mobile">
+
+            <button onclick="animarMenu()" id="btn-menu">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </button>
+
+            <div class="menu-mobile" id="menu-mobile">
                 <nav>
                     <a href="#">HOME</a>
                     <a href="#">LOJAS</a>
@@ -28,12 +38,17 @@
                     <a href="#">CONTATO</a>
                 </nav>
             </div>
+
             <div class="sociais">
                 <button class="ins"><i class="fa-brands fa-instagram"></i></button>
                 <button class="you"><i class="fa-brands fa-youtube"></i></button>
                 <button class="wap"><i class="fa-brands fa-whatsapp"></i></button>
             </div>
+
         </div>
+
     </header>
+    <script src="animar.js"></script>
+
 </body>
 </html>
