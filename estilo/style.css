@@ -18,7 +18,7 @@ html, body{
 }
 
 body{
-    background-image: url(img/teclado.jpg);
+    background-image: url(img/deserto.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,7 +33,7 @@ body{
 }
 
 header{
-    background-image: linear-gradient(to right, #019bb69e, transparent);
+    background-image: linear-gradient(to right, #866437, transparent);
     height: 35px;
     padding: 15px;
     width: 100%;
