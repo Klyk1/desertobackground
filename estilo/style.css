@@ -7,7 +7,6 @@
 * {
     margin: 0;
     border: 0;
-    box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -24,7 +23,6 @@ body{
 }
 
 .container{
-    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -34,11 +32,11 @@ body{
 header{
     background-image: linear-gradient(to right, #019bb69e, transparent);
     height: 35px;
-    padding: 0px;
-    width: auto;
+    padding: 15px;
+    width: 100%;
 }
 
-.logo img{
+.logo > img{
     cursor: pointer;
     width: 150px;
 }
@@ -51,69 +49,36 @@ header{
 }
 
 
-.sub-menu-1 {
-    display: none;
-}
-
-.menu:hover .sub-menu-1 {
-    background-color: #019bb6;
-    display: block;
-    /*margin: 0px 0px 0 -60px;*/
-    margin-left: -60px;
-    margin-top: 15px;
-    padding: 30px 0px;
-    position: absolute;
-    top: 45px;
-
-}
-
-
-.menu:hover .sub-menu-1 ul {
-    display: block;
-}
-
-.menu:hover .sub-menu-1 ul li {
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.7s;
-    width: 150px;
-}
-
-.menu:hover .sub-menu-1 ul li a {
-    font-size: 1em;
-    line-height: 2em;
-}
-
-
-.menu nav ul {
-    display: flex;
+.menu > nav > ul {
+    display: inline-flex;
     list-style: none;
 }
 
-.menu nav ul li a {
+.menu > nav > ul > li > a {
     color: #ffffff;
-    font-size: 1.1em;
-    padding-right: 40px;
+    font-size: 1em;
+    margin: 0px 30px;
+    padding: 10px 10px;
     position: relative;
     text-decoration: none;
 }
 
-.menu nav ul li a::after {
+.menu > nav > ul > li > a::after {
     background-image: linear-gradient(45deg, #ffc800, #88872f );
     content: " ";
     height: 4px;
     left: 0;
     position: absolute;
-    top: 25px;
+    top: 30px;
     transition: 0.7s;
     width: 0px;
 }
 
-.menu nav ul li a:hover::after{
-    width: 80%;
+.menu > nav > ul > li > a:hover::after{
+    width: 0px;
 }
 
-.sociais button{
+.sociais > button{
     background-image: linear-gradient(45deg, #ffc800, #88872f );
     border-radius: 6px;
     cursor: pointer;
@@ -123,7 +88,7 @@ header{
     width: 40px;
 }
 
-.sociais button i{
+.sociais > button > i{
     font-size: 1.9rem;
 }
 
@@ -154,12 +119,13 @@ header{
         background: transparent;
         cursor: pointer;
         height: 41px;
+        margin-right: 30px;
         width: 41px;
     }
 
 
     .linha {
-        background-color: rgb(112, 108, 108);
+        background-color: #fff;
         display: block;
         height: 2px;
         margin: 5px auto;
@@ -168,8 +134,13 @@ header{
         width: 30px;    
     }
 
+    button.ativo{
+        background-color: #b0000051;
+        border-radius: 50%;
+    }
     button.ativo .linha:nth-child(1){
         background-color: #b00000;
+        box-shadow: 0px 0px 20px 1px red;
         transform: translateY(7px) rotate(405deg);
     }
 
@@ -180,6 +151,7 @@ header{
 
     button.ativo .linha:nth-child(3){
         background-color: #b00000;
+        box-shadow: 0px 0px 20px 1px red;
         transform: translateY(-7px) rotate(-405deg);
     }
 
@@ -190,17 +162,17 @@ header{
         left:                  0;
         overflow:              hidden;
         position:              absolute;
-        top:                   50px;
+        top:                   65px;
         transition:            0.7s;
-        width:                 100vh;
+        width:                 100%;
     }
 
     .menu-mobile.abre-fecha{
-        height:                calc(100vh - 100px);
+        height:                calc(100vh - 90px);
         visibility:            visible;
     }
 
-    .menu-mobile nav a{
+    .menu-mobile > nav > a{
         color:               blue;
         display:             block;
         font-size:           1.5rem;
@@ -212,7 +184,7 @@ header{
         width:               0px;
     }
 
-    .menu-mobile nav a:hover {
+    .menu-mobile > nav > a:hover {
         background-color:   #000000a4;
         width: 100%;
     }
@@ -234,23 +206,23 @@ header{
         display: none;
     }
 
-    .logo img{
+    .logo > img{
         width: 100px;
     }
 
-    .menu nav a {
+    .menu > nav > a {
         font-size: 1em;
         padding-right: 10px;
     }
     
-    .sociais button{
+    .sociais > button{
         border-radius: 3px;
         height: 20px;
         margin: 5px;
         width: 20px;
     }
 
-    .sociais button i{
+    .sociais > button > i{
         font-size: 1rem;
     }    
 }
@@ -268,7 +240,7 @@ header{
         display: none;
     }
 
-    .menu nav a {
+    .menu > nav > ul > li > a {
         padding: 5px;
     }
 }
@@ -285,9 +257,10 @@ header{
     header{
         height: auto;
     }
-    .menu nav a {
-        font-size: 1.2rem;
+    .menu > nav > ul > li > a {
+        font-size: 1rem;
     }
+
 }
     
 
