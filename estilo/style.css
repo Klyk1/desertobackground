@@ -32,10 +32,10 @@ body{
 }
 
 header{
-    background-image: linear-gradient(to right, #0000ffc3, transparent);
-    height: 50px;
-    padding: 10px;
-    width: 100%;
+    background-image: linear-gradient(to right, #019bb69e, transparent);
+    height: 35px;
+    padding: 0px;
+    width: auto;
 }
 
 .logo img{
@@ -50,7 +50,47 @@ header{
     width: 50%;
 }
 
-.menu nav a {
+
+.sub-menu-1 {
+    display: none;
+}
+
+.menu:hover .sub-menu-1 {
+    background-color: #019bb6;
+    display: block;
+    /*margin: 0px 0px 0 -60px;*/
+    margin-left: -60px;
+    margin-top: 15px;
+    padding: 30px 0px;
+    position: absolute;
+    top: 45px;
+
+}
+
+
+.menu:hover .sub-menu-1 ul {
+    display: block;
+}
+
+.menu:hover .sub-menu-1 ul li {
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.7s;
+    width: 150px;
+}
+
+.menu:hover .sub-menu-1 ul li a {
+    font-size: 1em;
+    line-height: 2em;
+}
+
+
+.menu nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li a {
     color: #ffffff;
     font-size: 1.1em;
     padding-right: 40px;
@@ -58,7 +98,7 @@ header{
     text-decoration: none;
 }
 
-.menu nav a::after {
+.menu nav ul li a::after {
     background-image: linear-gradient(45deg, #ffc800, #88872f );
     content: " ";
     height: 4px;
@@ -69,8 +109,8 @@ header{
     width: 0px;
 }
 
-.menu nav a:hover::after{
-    width: 50px;
+.menu nav ul li a:hover::after{
+    width: 80%;
 }
 
 .sociais button{
